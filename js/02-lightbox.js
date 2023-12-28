@@ -21,14 +21,14 @@ for (let item of galleryItems) {
   gallery.appendChild(galleryItem);
 }
 
-gallery.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  const lightbox = new SimpleLightbox(".gallery a", {
-    /* options */
+var images = document.querySelectorAll(".gallery img");
+images.forEach(function (image) {
+  image.addEventListener("click", function (event) {
+    event.preventDefault();
+    const lightbox = new SimpleLightbox(".gallery a", {
+      /* options */
+    });
   });
-
-  lightbox.show();
 });
 
 // Change code below this line
